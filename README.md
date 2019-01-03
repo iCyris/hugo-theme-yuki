@@ -1,2 +1,4 @@
 # hugo-theme-yuki
-😋 Stay tuned
+Now it's under designing.
+
+
