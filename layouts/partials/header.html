@@ -1,35 +1,20 @@
 {{ partial "head.html" . }}
 
 <body>
-    <div class="header">
-        <div class="site-logo__wrap">
-            <div id="site-button">
-                <div></div>
-            </div>
-            <div class="site-logo">
-                <a href="/">
+<div class="header">
+    <div class="site-logo__wrap">
+        <div id="site-button">
+            <div></div>
+        </div>
+        {{ $currentPage := . }}
+        <div class='{{ if eq $currentPage.URL "/" }} site-logo site-logo__index {{ else }} site-logo {{ end }}'>
+            <a href="/">
                 {{- with .Site.Params.logo -}}
                 <img src="{{ . | absURL }}" />
                 {{- end -}}
-                </a>
-            </div>
-        </div>
-        <div class="site-nav u-font" id="nav-bar">
-            <div class="site-nav__wrap">
-                <a class="site-nav__el" href="/">HOME</a>
-            </div>
-            <div class="site-nav__wrap">
-                <a class="site-nav__el" href="/posts">BLOG</a>
-            </div>
-            <div class="site-nav__wrap">
-                <a class="site-nav__el" href="/pages/about">ABOUT</a>
-            </div>
-            <div class="site-nav__wrap">
-                <a class="site-nav__el" href="/tags">TAG</a>
-            </div>
-            <div class="site-nav__wrap">
-                <a class="site-nav__el" href="/pages/links">FRIENDS</a>
-            </div>
+            </a>
         </div>
     </div>
-    <div class="main">
+    {{ partial "navbar.html" . }}
+</div>
+<div class="main">
