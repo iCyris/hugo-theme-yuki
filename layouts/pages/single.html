@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<div class="main-page">
+    <div class="main-page__title title-type__custom u-font">
+        <h1 id="title">{{ .Title }}</h1>
+    </div>
+    <div>
+        <article id="content">
+            {{ .Content }}
+        </article>
+    </div>
+</div>
+{{ partial "footer.html" . }}

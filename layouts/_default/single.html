@@ -1,0 +1,36 @@
+{{ partial "header.html" . }}
+
+<div class="main-page">
+    <div class="main-page__date">
+        <h4 id="date"> {{ .Date.Format "2006.01.02" }} </h4>
+    </div>
+    <div class="main-page__title">
+        <h1 id="title">{{ .Title }}</h1>
+    </div>
+    <div>
+        <article id="content">
+            {{ .Content }}
+        </article>
+    </div>
+</div>
+<div class="main-page-meta">
+    <div class="main-page__tags">
+        {{ with .Params.tags }}
+        <div class="tags">
+            {{ range . }}
+            <span> <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a> </span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+    <div class="main-page__pn">
+        {{ with .PrevInSection }}
+        <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

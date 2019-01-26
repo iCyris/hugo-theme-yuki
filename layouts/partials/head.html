@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        {{ block "title" . }}
+        {{ .Site.Title }}
+        {{ end }}
+    </title>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    {{- with .Site.Params.favicon }}
+    <link rel='icon' type='image/x-icon' href="{{ . | absURL }}" />
+    <link rel="apple-touch-icon" href="{{ . | absURL }}">
+    {{- end -}}
+    <link rel="stylesheet" href="/scss/style.css">
+    <!-- HighlightJS -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/monokai-sublime.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="/scss/highlight.css">
+    <!-- Google Analytics -->
+    {{ with .Site.Params.ga_api_key }}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ . }}', 'auto');
+        ga('send', 'pageview');
+    </script>
+    {{ end }}
+    <!-- Hugo version -->
+    {{ .Hugo.Generator -}}
+</head>

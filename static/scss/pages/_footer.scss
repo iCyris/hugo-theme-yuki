@@ -1,0 +1,19 @@
+/*
+ * Footer
+*/
+.footer {
+  position: relative;
+  width: 100%;
+  left: 0; bottom: 0;
+  margin-top: 20vh;
+}
+.copyright-wrap {
+  text-align: center;
+  border-top: $theme-color-gray-light 1px solid;
+}
+.copyright {
+  padding: 2.5vh 0;
+  font-size: .4rem;
+  color: $theme-color-gray;
+  a { color: $theme-color-gray ;}
+}

@@ -1,0 +1,89 @@
+/*
+ * Index page
+ */
+.index-displayImg {
+  @media screen and (max-width: 800px){ height: 25vh ;}
+  position: relative;
+  width: 100vw; height: 85vh;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+}
+.index-line {
+  @media screen and (max-width: 800px){ width: 80vw ;}
+  position: relative;
+  margin: 0 auto;
+  margin-top: 8vmin;
+  text-align: center;
+  width: 50vw; height: 5vh;
+  border-top: $theme-color-gray-light 1px solid;
+  line-height: 5vh;
+  span {
+    display: inline-block;
+    color: $theme-color-black;
+    border-top: $theme-color-gold 3px solid;
+    margin-top: -1px;
+    opacity: .9;
+    font-size: 1rem;
+  }
+}
+.index-sns {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 3vmin;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  a {
+    @media screen and (max-width: 800px){
+      width: 55%;
+      padding: 1.7vh 3vw;
+      margin: 3vmin auto;
+      font-size: .7rem;
+    }
+    margin: 2vmin auto;
+    padding: 1.3vh 0.2vw;
+    width: 18%;
+    color: $theme-color-gray-heavy;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    border: $theme-color-gray-heavy 1px solid;
+    transition: all .2s ease;
+    &:hover {
+      color: $theme-color-white;
+      background-color: $theme-color-gold-light;
+    }
+  }
+}
+.index-posts {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-top: 4vmin;
+  width: 50vw;
+  @media screen and (max-width: 800px){ width: 80vw ;}
+  .index-posts__list {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin: 2vh 0;
+    font-size: .8rem;
+  }
+  a {
+    transition: all .3s ease;
+    letter-spacing: 0.8px;
+    &:hover { opacity: .6 ;}
+  }
+  .l-time {
+    a {
+      color: $theme-color-gray-heavy;
+    }
+  }
+  .l-title {
+    a { color: $theme-color-black ;}
+    margin-left: 1vw;
+  }
+}
+/*
+ * Animations
+ */

@@ -6,7 +6,7 @@
             <div id="site-button">
                 <div></div>
             </div>
-            <div class="site-logo">
+            <div class="site-logo  site-logo__index">
                 <a href="/">
                 {{- with .Site.Params.logo -}}
                 <img src="{{ . | absURL }}" />
@@ -14,7 +14,7 @@
                 </a>
             </div>
         </div>
-        <div class="site-nav u-font" id="nav-bar">
+        <div class="site-nav site-nav__index u-font" id="nav-bar">
             <div class="site-nav__wrap">
                 <a class="site-nav__el" href="/">HOME</a>
             </div>

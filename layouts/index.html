@@ -1,0 +1,43 @@
+{{ partial "header_index.html" . }}
+
+<!-- Display image -->
+<div class="index-displayImg" style="background-image: url(/images/display.png)"></div>
+
+<!-- SNS -->
+<div class="index-line u-font">
+    {{- with .Site.Params.snsTitle -}}
+    <span class="index-line__content u-font">{{ . }}</span>
+    {{- end -}}
+</div>
+<div class="index-sns u-font">
+    <a class="index-sns__name" target="_blank" href="https://cyris.moe">CYRIS.MOE</a>
+    {{- with .Site.Params.Twitter -}}
+    <a class="index-sns__name" target="_blank" href="https://twitter.com/{{ . }}">Twitter</a>
+    {{- end -}}
+    {{- with .Site.Params.GitHub -}}
+    <a class="index-sns__name" target="_blank" href="https://github.com/{{ . }}">GitHub</a>
+    {{- end -}}
+</div>
+
+<!-- Content list -->
+<div class="index-line">
+    <span class="index-line__content u-font">Home</span>
+</div>
+
+<div class="index-posts">
+    {{- .Content -}}
+    {{- range .Site.RegularPages -}}
+    <div class="index-posts__list">
+        <span class="l-time"><a href="{{.Permalink}}">{{ .Date.Format "2006.01.02 15:04" }}</a></span>
+        <span class="l-title"><a href="{{.Permalink}}">{{.Title}}</a></span>
+    </div>
+    {{- end -}}
+</div>
+
+<div class="index-paginate">
+    
+</div>
+
+
+
+{{ partial "footer.html" . }}

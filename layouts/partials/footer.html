@@ -1,0 +1,20 @@
+</div>
+<div class="footer">
+    <div class="copyright-wrap">
+        <p class="copyright u-font">
+            &copy;
+            {{ with .Site.Copyright | safeHTML }}
+            {{- . -}}.
+            {{ else }}
+            {{ .Site.LastChange.Format "2006" }}
+            {{ if .Site.Params.author }}
+            <a href="{{ .Site.Params.authorwebsite }}" target="_blank">{{ .Site.Params.author }}.</a>
+            {{ end }}
+            {{ end }}
+            Theme <a href="https://github.com/iCyris/hugo-theme-yuki" target="_blank">yuki</a>.
+            Powered by Hugo.
+        </p>
+    </div>
+</div>
+</body>
+<script src="/js/page.js"></script>
