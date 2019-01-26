@@ -10,7 +10,7 @@
   background-size: cover;
 }
 .index-line {
-  @media screen and (max-width: 800px){ width: 80vw ;}
+  @media screen and (max-width: 800px){ width: 90vw ;}
   position: relative;
   margin: 0 auto;
   margin-top: 8vmin;
@@ -61,29 +61,28 @@
   margin: 0 auto;
   margin-top: 4vmin;
   width: 50vw;
-  @media screen and (max-width: 800px){ width: 80vw ;}
+  @media screen and (max-width: 800px){ width: 90vw ;}
   .index-posts__list {
-    display: inline-block;
+    display: flex;
     width: 100%;
     text-align: left;
-    margin: 2vh 0;
+    margin: 4vh 0;
     font-size: .8rem;
+    @media screen and (max-width: 800px){ flex-direction: column ; margin: 2.8vh 0;}
   }
   a {
     transition: all .3s ease;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     &:hover { opacity: .6 ;}
   }
   .l-time {
-    a {
-      color: $theme-color-gray-heavy;
-    }
+    width: 8rem; height: auto;
+    a {color: rgba(17,17,17,.5) ;}
   }
   .l-title {
+    width: calc(100% - 8rem);
     a { color: $theme-color-black ;}
-    margin-left: 1vw;
+    @media screen and (max-width: 800px){ width: 100% ;}
   }
+  .l-time, .l-title { @media screen and (max-width: 800px){ width: 100%; margin: 1vh 0;} }
 }
-/*
- * Animations
- */

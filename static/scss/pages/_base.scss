@@ -23,7 +23,7 @@ a {
   &:hover { color: $theme-color-gold-light ;}
 }
 article {
-  margin: 45px 0 30px;
+  margin: 6vh 0;
   word-wrap: break-word;
   color: $theme-color-black;
   p {
@@ -35,3 +35,10 @@ article {
     letter-spacing: 1px;
   }
 }
+blockquote {
+  p {
+    border-left: $theme-color-gold 3px solid;
+    padding: 0 15px;
+  }
+}
+h1, h2, h3, h4 { color: $theme-color-black ;}
