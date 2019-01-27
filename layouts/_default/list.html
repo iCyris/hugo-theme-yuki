@@ -1,16 +1,32 @@
 {{ partial "header.html" . }}
 
-<div class="main-page">
-    <div class="main-page__list">
-        <ul>
-            {{ range .Pages }}
-            <div>
-                <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+<div class="main-content">
+    {{ $baseurl := .Site.BaseURL | sanitizeurl }}
+    <div class="main-content__title title-type__custom u-font">
+        <h1 id="title">{{ .Title }}</h1>
+    </div>
+
+    <article>
+        <div class="main-content__posts index-posts">
+            {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+            {{ range $paginator.Pages }}
+            <div class="index-posts__list">
+                <div class="l-time"><a href="{{.Permalink}}">{{ .Date.Format "2006.01.02 15:04" }}</a></div>
+                <div class="l-title"><a href="{{.Permalink}}">{{ .Title }}</a></div>
             </div>
             {{ end }}
-        </ul>
-    </div>
+
+            {{ $data := .Data }}
+            {{ range $key, $value := .Data.Terms }}
+            <span class="mpl-t-wrap">
+               <a href="{{ $baseurl }}/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}
+                   <span>({{ len $value }})</span>
+               </a>
+            </span>
+
+            {{ end }}
+        </div>
+    </article>
 </div>
 
 {{ partial "footer.html" . }}

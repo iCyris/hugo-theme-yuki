@@ -23,7 +23,7 @@ a {
   &:hover { color: $theme-color-gold-light ;}
 }
 article {
-  margin: 6vh 0;
+  margin: 4vh 0;
   word-wrap: break-word;
   color: $theme-color-black;
   p {
@@ -33,6 +33,7 @@ article {
     margin: 24px 0;
     word-wrap: break-word;
     letter-spacing: 1px;
+    @media screen and (max-width: 800px) { line-height: 28px ;}
   }
 }
 blockquote {

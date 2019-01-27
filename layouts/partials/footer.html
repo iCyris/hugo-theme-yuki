@@ -4,17 +4,18 @@
         <p class="copyright u-font">
             &copy;
             {{ with .Site.Copyright | safeHTML }}
-            {{- . -}}.
+            {{- . -}}&#46;
             {{ else }}
             {{ .Site.LastChange.Format "2006" }}
             {{ if .Site.Params.author }}
-            <a href="{{ .Site.Params.authorwebsite }}" target="_blank">{{ .Site.Params.author }}.</a>
+            <a href="{{ .Site.Params.authorwebsite }}" target="_blank">{{ .Site.Params.author }}&#46;</a>
             {{ end }}
             {{ end }}
-            Theme <a href="https://github.com/iCyris/hugo-theme-yuki" target="_blank">yuki</a>.
-            Powered by Hugo.
+            Theme <a href="https://github.com/iCyris/hugo-theme-yuki" target="_blank">yuki</a>&#46;
+            Powered by Hugo&#46;
         </p>
     </div>
 </div>
 </body>
 <script src="/js/page.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>

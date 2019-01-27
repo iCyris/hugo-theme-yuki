@@ -4,7 +4,7 @@
 
 [Demo](https://cyris.pen.moe)
 
-[Screenshots]()
+[Screenshot-1](./res/screenshot-1.png)
 
 ## Features
 
@@ -72,8 +72,8 @@ This theme is built and improved upon by open source [contributions](https://git
 
 If you're contributing CSS changes, there are two ways: 
 
-1. Simply make changes on `themes/hugo-theme-yuki/static/scss/custom.css`, the style will be overwrited.
-2. Use [sass](https://sass-lang.com/). Directly make changes on the `*.scss` files and recompile `style.scss` or `highlight.scss`.
+1. Simply make changes on `/static/scss/custom.css`, the style will be overwrited.
+2. Use [SASS](https://sass-lang.com/). Directly make changes on the `*.scss` files and recompile `style.scss` or `highlight.scss`.
 
 ## License
 

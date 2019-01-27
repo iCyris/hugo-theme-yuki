@@ -1,36 +1,64 @@
 {{ partial "header.html" . }}
 
-<div class="main-page">
-    <div class="main-page__date">
-        <h4 id="date"> {{ .Date.Format "2006.01.02" }} </h4>
+<div class="main-content">
+    <div class="main-content__date">
+        <h4 id="date"> {{ .Date.Format "2006.01.02 15:04" }} </h4>
     </div>
-    <div class="main-page__title">
+    <div class="main-content__title">
         <h1 id="title">{{ .Title }}</h1>
     </div>
-    <div>
+    <div class="main-content__article">
         <article id="content">
             {{ .Content }}
         </article>
     </div>
-</div>
-<div class="main-page-meta">
-    <div class="main-page__tags">
+    <div class="main-content__tags u-font">
         {{ with .Params.tags }}
-        <div class="tags">
-            {{ range . }}
-            <span> <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a> </span>
+        {{ range . }}
+        <span><a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a></span>
+        {{ end }}
+        {{ end }}
+    </div>
+</div>
+<div class="main-profile">
+    <div class="main-profile__avatar">
+        {{ with .Site.Params.avatar }}
+            <img src="{{ . }}">
+        {{ end }}
+    </div>
+    <div class="main-profile__body">
+        <div class="main-profile__author">
+            {{ with .Site.Params.author }}
+            <span> {{ . }} </span>
             {{ end }}
         </div>
-        {{ end }}
+        <div class="main-profile__description">
+            {{ with .Site.Params.description }}
+            <p> {{ . }} </p>
+            {{ end }}
+        </div>
     </div>
-    <div class="main-page__pn">
-        {{ with .PrevInSection }}
-        <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-        {{ with .NextInSection }}
-        <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-    </div>
+</div>
+<div class="main-line"></div>
+<div class="main-pn">
+    {{ with .PrevInSection }}
+    <a class="previous" href="{{.Permalink}}">
+        <div class="pn-dec"></div>
+        <div class="pn-els">
+            <div class="pn-el__1"> {{ .Date.Format "2006.01.02 15:04" }} </div>
+            <div class="pn-el__2"> {{.Title}} </div>
+        </div>
+    </a>
+    {{ end }}
+    {{ with .NextInSection }}
+    <a class="next" href="{{.Permalink}}">
+        <div class="pn-dec"></div>
+        <div class="pn-els">
+            <div class="pn-el__1"> {{ .Date.Format "2006.01.02 15:04" }} </div>
+            <div class="pn-el__2"> {{.Title}} </div>
+        </div>
+    </a>
+    {{ end }}
 </div>
 
 {{ partial "footer.html" . }}
