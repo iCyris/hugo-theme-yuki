@@ -9,7 +9,7 @@
 * Responsive
 * Syntax highlighting with highlightjs
 * Social links（Customize）
-* Custom Page
+* Custom Pages
 * Support for Related Content
 * Support for tags
 * Google Analytics
