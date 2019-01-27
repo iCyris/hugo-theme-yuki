@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   left: 0; bottom: 0;
-  margin-top: 20vh;
+  margin-top: 8vh;
 }
 .copyright-wrap {
   text-align: center;
@@ -13,7 +13,7 @@
 }
 .copyright {
   padding: 2.5vh 0;
-  font-size: 1vmin;
+  font-size: .6rem;
   color: $theme-color-gray;
   a { color: $theme-color-gray ;}
 }

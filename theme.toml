@@ -1,10 +1,10 @@
 name = "Yuki"
 license = "MIT"
 licenselink = "https://github.com/iCyris/hugo-theme-yuki/blob/master/LICENSE"
-description = "Yuki is a cute blog theme for Hugo."
-homepage = "https://cyris.pen.moe"
-tags = ["blog"]
-features = ["blog"]
+description = "Hugo theme yuki. She is as pure as the snow."
+homepage = "https://github.com/iCyris/hugo-theme-yuki"
+tags = ["blog", "responsive", "highlight", "clean"]
+features = ["blog", "responsive", "highlight", "clean"]
 min_version = "0.41"
 
 [author]

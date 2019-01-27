@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <!-- Display image -->
-<div class="index-displayImg" style='background-image: url("{{ .Site.Params.displayImg }}")'></div>
+<div class="index-displayImg" style="background-image: url('{{ .Site.Params.displayImg | absURL }}')"></div>
 
 <!-- Social accounts -->
 <div class="index-line u-font">
@@ -30,7 +30,7 @@
 </div>
 
 <div class="index-paginate">
-
+    {{ partial "pagination.html" . }}
 </div>
 
 {{ partial "footer.html" . }}

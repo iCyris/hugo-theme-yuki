@@ -16,6 +16,10 @@
             </div>
             {{ end }}
 
+            <div class="index-paginate">
+                {{ partial "pagination.html" . }}
+            </div>
+
             {{ $data := .Data }}
             {{ range $key, $value := .Data.Terms }}
             <span class="mpl-t-wrap">

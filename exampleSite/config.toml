@@ -1,0 +1,68 @@
+baseurl = "https://example.com/"
+languageCode = "en-us"
+title = "Hugo Theme Yuki"
+theme = "hugo-theme-yuki"
+author = "Cyris"
+
+# Copyright notice. This will display on the footer.
+copyright = ""
+ 
+# Theme config
+[params]
+  paginate = 10
+  
+  # The information will display on the post pages.
+  author = "Author"
+  description = "Short description"
+  authorwebsite = "https://example.com/"
+  
+  # The path to your images
+  favicon = "/images/logo.png"
+  logo = "/images/logo.png"
+  avatar = ""
+  displayImg = "/images/display.png"
+  
+  # This will display on the index page
+  snsTitle = "SOCIAL"
+  
+  # Google Analytics API key.
+  ga_api_key = "Your Google Analytics tracking id"
+  
+# Navbar config
+[[menu.nav]]
+    name = "HOME"
+    url = "/"
+    weight = 1
+
+[[menu.nav]]
+    name = "BLOG"
+    url = "/posts"
+    weight = 2
+
+[[menu.nav]]
+    name = "ABOUT"
+    url = "/pages/about"
+    weight = 3
+    
+[[menu.nav]]
+    name = "TAGS"
+    url = "/tags/"
+    weight = 4
+
+# Social accounts config (This will display on the index page)
+[[menu.social]]
+    name = "Example-1"
+    url = "/"
+    weight = 1
+    
+[[menu.social]]
+    name = "Example-2"
+    url = "/"
+    weight = 2
+
+[[menu.social]]
+    name = "Example-3"
+    url = "/"
+    weight = 3
+
+

@@ -4,7 +4,7 @@
 
 [Demo](https://cyris.pen.moe)
 
-[Screenshot-1](./res/screenshot-1.png)
+![Screenshot](./images/screenshot.png)
 
 ## Features
 
@@ -67,8 +67,6 @@ hugo new pages/about.md
 ````
 
 ## Development
-
-This theme is built and improved upon by open source [contributions](https://github.com/nishanths/cocoa-hugo-theme/graphs/contributors). Pull requests, bug fixes, and new features are welcome!
 
 If you're contributing CSS changes, there are two ways: 
 

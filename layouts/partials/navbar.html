@@ -1,6 +1,6 @@
 {{ $currentNode := . }}
 <div class='{{ if eq $currentNode.URL "/" }} site-nav site-nav__index u-font {{ else }} site-nav u-font {{ end }}' id="nav-bar">
-    {{ range .Site.Menus.main }}
+    {{ range .Site.Menus.nav }}
     <div class="site-nav__wrap">
         <a class="site-nav__el" href="{{ .URL }}" >{{ .Name }}</a>
     </div>

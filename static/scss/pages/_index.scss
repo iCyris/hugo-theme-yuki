@@ -2,7 +2,7 @@
  * Index page
  */
 .index-displayImg {
-  @media screen and (max-width: 800px){ height: 25vh ;}
+  @media screen and (max-width: 800px){ height: 28vh ;}
   position: relative;
   width: 100vw; height: 85vh;
   margin: 0 auto;
@@ -85,4 +85,31 @@
     @media screen and (max-width: 800px){ width: 100% ;}
   }
   .l-time, .l-title { @media screen and (max-width: 800px){ width: 100%; margin: 1vh 0;} }
+}
+.index-paginate {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2vh;
+  display: inline-block;
+  text-align: center;
+  font-size: .8rem;
+  nav { position: relative; margin: 0 auto ;}
+  ul { list-style-type: none ;}
+  li { display: inline-block ;}
+  a {
+    @media screen and (max-width: 800px) { padding: 2vmin ;}
+    display: inline-block;
+    color: rgba(17,17,17, 0.5);
+    padding: 1vmin;
+    transition: opacity .2s ease;
+    &:hover { opacity: .4 ;}
+  }
+  .active {
+    a {
+      color: $theme-color-black;
+      cursor: none;
+      pointer-events: none;
+    }
+  }
 }
