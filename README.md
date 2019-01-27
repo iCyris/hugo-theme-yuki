@@ -2,8 +2,6 @@
 
 ❄️ Hugo theme yuki. She is as pure as the snow.
 
-[Demo](https://cyris.pen.moe)
-
 ![Screenshot](./images/screenshot.png)
 
 ## Features
