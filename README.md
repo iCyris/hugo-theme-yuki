@@ -2,7 +2,7 @@
 
 ❄️ Hugo theme yuki. She is as pure as the snow.
 
-![Screenshot](./images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/iCyris/hugo-theme-yuki/master/images/screenshot.png)
 
 ## Features
 
