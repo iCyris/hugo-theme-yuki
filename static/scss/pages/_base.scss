@@ -15,6 +15,9 @@ body {
   left: 0; top: 0;
   text-align: center;
   min-height: 65vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 a {
   text-decoration: none;
@@ -30,10 +33,21 @@ article {
     font-size: 1rem;
     line-height: 30px;
     font-weight: 340;
-    margin: 24px 0;
+    margin-top: 20px;
     word-wrap: break-word;
     letter-spacing: 1px;
     @media screen and (max-width: 800px) { line-height: 28px ;}
+  }
+  ul, ol {
+    box-sizing: border-box;
+    padding-left: 40px;
+    font-size: .9rem;
+    line-height: 21px;
+    font-weight: 400;
+    margin-top: 2vh;
+    letter-spacing: 1px;
+    li { padding-left: 3px ;}
+    @media screen and (max-width: 800px) { padding-left: 30px ;}
   }
 }
 blockquote {
@@ -41,5 +55,11 @@ blockquote {
     border-left: $theme-color-gold 3px solid;
     padding: 0 15px;
   }
+}
+p code {
+  font-size: .9rem;
+  padding: 2px;
+  color: $theme-color-green-blue;
+  background-color: $theme-color-background;
 }
 h1, h2, h3, h4 { color: $theme-color-black ;}

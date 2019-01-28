@@ -24,7 +24,7 @@
     }
   }
   h1 {font-size: 1.8rem; margin: 2vh 0;}
-  h2 {font-size: 1.7rem; margin: 1.6vh 0;}
+  h2 {font-size: 1.7rem; margin: 1.8vh 0;}
   h3 {font-size: 1.6rem; margin: 1.6vh 0;}
   h4 {font-size: 1.5rem; margin: 1.4vh 0;}
   h5 {font-size: 1.4rem; margin: 1.22vh 0;}
@@ -32,16 +32,11 @@
   hr {margin: 5vh auto;}
   dl {
     margin: 1vh 1vh;
+    box-sizing: border-box;
     dt, dd {
-      //padding: 10px 30px;
+      padding: 10px 30px;
     }
   }
-  /*
-  p + code {
-    color: $theme-color-green-blue;
-    background-color: $theme-color-background;
-  }
-  */
 }
 .main-content__date {
   position: relative;
