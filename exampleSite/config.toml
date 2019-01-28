@@ -17,10 +17,10 @@ copyright = ""
   authorwebsite = "https://example.com/"
   
   # The path to your images
-  favicon = "/images/logo.png"
-  logo = "/images/logo.png"
+  favicon = "images/logo.png"
+  logo = "images/logo.png"
   avatar = ""
-  displayImg = "/images/display.png"
+  displayImg = "images/display.png"
   
   # This will display on the index page
   snsTitle = "Social"
