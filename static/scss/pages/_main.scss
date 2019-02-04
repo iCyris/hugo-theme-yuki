@@ -5,11 +5,11 @@
   @media screen and (max-width: 800px) { width: 90vw ;}
   position: relative;
   margin: 0 auto; margin-top: 6vmin;
-  width: 60vw;
+  width: 56vw;
   text-align: left;
   img {
     display: block;
-    max-width: 60vw;
+    max-width: 56vw;
     height: auto;
     @media screen and (max-width: 800px) { max-width: 90vw ;}
   }
@@ -45,6 +45,7 @@
     font-size: 1rem;
     font-weight: 300;
     color: #9b9b9b;
+    margin-left: 2.1px;
     &::before {content: none;}
   }
 }
@@ -95,7 +96,7 @@
   @media screen and (max-width: 800px) { width: 90vw; height: 24vmin ;}
   position: relative;
   margin: 10vh auto;
-  width: 60vw; height: 15vmin;
+  width: 56vw; height: 15vmin;
   border-radius: 2px;
   border: $theme-color-gray-light 1px solid;
   .main-profile__avatar {
@@ -113,7 +114,7 @@
     position: absolute;
     box-sizing: border-box;
     height: 100%; width: 100%;
-    padding: 2.5vmin 6vmin 2.5vmin 16vmin;
+    padding: 2.5vmin 5vmin 2.5vmin 16vmin;
     text-align: left;
     color: $theme-color-black;
   }
@@ -141,13 +142,13 @@
   @media screen and (max-width: 800px) { width: 90vw; margin: 6vh auto 4vh auto ;}
   position: relative;
   margin: 10vh auto 4vh auto;
-  width: 60vw; height: 1px;
+  width: 56vw; height: 1px;
   background-color: $theme-color-gray-light;
 }
 .main-pn {
   @media screen and (max-width: 800px) { width: 90vw ;}
   position: relative;
-  width: 60vw; height: 13vh;
+  width: 56vw; height: 13vh;
   margin: 0 auto;
   .previous, .next {
     display: inline-block;
