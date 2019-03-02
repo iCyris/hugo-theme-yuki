@@ -20,8 +20,8 @@
     <span class="index-line__content u-font">Home</span>
 </div>
 <div class="index-posts">
-    {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-    {{ range $paginator.Pages }}
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ range $pages }}
     <div class="index-posts__list">
         <div class="l-time"><a href="{{.Permalink}}">{{ .Date.Format "2006.01.02 15:04" }}</a></div>
         <div class="l-title"><a href="{{.Permalink}}">{{.Title}}</a></div>

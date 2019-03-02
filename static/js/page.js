@@ -1,7 +1,9 @@
 window.onscroll = function() {fixNav()};
 
 let navbar = document.getElementById("nav-bar");
-let sticky = navbar.offsetTop;
+let logo =  document.querySelector(".site-logo__wrap");
+
+let sticky = logo.offsetHeight;
 
 function fixNav() {
     if (window.pageYOffset >= sticky) {

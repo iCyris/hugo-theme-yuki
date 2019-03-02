@@ -8,17 +8,19 @@
 
     <article>
         <div class="main-content__posts index-posts">
-            {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-            {{ range $paginator.Pages }}
-            <div class="index-posts__list">
-                <div class="l-time"><a href="{{.Permalink}}">{{ .Date.Format "2006.01.02 15:04" }}</a></div>
-                <div class="l-title"><a href="{{.Permalink}}">{{ .Title }}</a></div>
-            </div>
-            {{ end }}
+            {{ $currentPage := . }}
+            {{ if eq $currentPage.URL "/post/" }}
+                {{ range .Pages }}
+                <div class="index-posts__list">
+                    <div class="l-time"><a href="{{.Permalink}}">{{ .Date.Format "2006.01.02 15:04" }}</a></div>
+                    <div class="l-title"><a href="{{.Permalink}}">{{ .Title }}</a></div>
+                </div>
+                {{ end }}
 
-            <div class="index-paginate">
-                {{ partial "pagination.html" . }}
-            </div>
+                <div class="index-paginate">
+                    {{ partial "pagination.html" . }}
+                </div>
+            {{ end }}
 
             {{ $data := .Data }}
             {{ range $key, $value := .Data.Terms }}
@@ -27,7 +29,6 @@
                    <span>({{ len $value }})</span>
                </a>
             </span>
-
             {{ end }}
         </div>
     </article>

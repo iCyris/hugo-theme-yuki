@@ -2,17 +2,17 @@
 <div class="footer">
     <div class="copyright-wrap">
         <p class="copyright u-font">
-            &#169
             {{ with .Site.Copyright | safeHTML }}
-            {{- . -}}&#46;
+            {{- . -}}
             {{ else }}
+            &#169;
             {{ .Site.LastChange.Format "2006" }}
             {{ if .Site.Params.author }}
             <a href="{{ .Site.Params.authorwebsite }}" target="_blank">{{ .Site.Params.author }}&#46;</a>
-            {{ end }}
-            {{ end }}
             Theme <a href="https://github.com/iCyris/hugo-theme-yuki" target="_blank">yuki</a>&#46;
             Powered by Hugo&#46;
+            {{ end }}
+            {{ end }}
         </p>
     </div>
 </div>
