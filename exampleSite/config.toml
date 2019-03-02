@@ -9,7 +9,10 @@ copyright = ""
  
 # Theme config
 [params]
-  paginate = 10
+  Paginate = 10
+  
+  # The content you want to be listed on list pages.
+  mainSections = ["post"]
   
   # The information will display on the post pages.
   author = "Author"
@@ -36,12 +39,12 @@ copyright = ""
 
 [[menu.nav]]
     name = "BLOG"
-    url = "/posts"
+    url = "/post"
     weight = 2
 
 [[menu.nav]]
     name = "ABOUT"
-    url = "/pages/about"
+    url = "/about"
     weight = 3
     
 [[menu.nav]]
