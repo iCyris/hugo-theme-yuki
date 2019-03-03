@@ -48,10 +48,10 @@ Please see the sample [`config.toml`](https://github.com/iCyris/hugo-theme-yuki/
 
 ### Creating Posts
 
-Posts should generally go under a `content/posts` directory. Typically you would run:
+Posts should generally go under a `content/post` directory. Typically you would run:
 
 ````sh
-hugo new posts/your-new-post.md
+hugo new post/your-new-post.md
 ````
 
 For posts to appear on your site, you may need `draft = false` in the post's front matter or use the `--buildDrafts` option when building.
