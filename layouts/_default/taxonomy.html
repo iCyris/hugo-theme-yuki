@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+<div class="main-content">
+    <div class="main-content__title title-type__custom u-font">
+    </div>
+
+    <article>
+        <div class="main-content__posts index-posts">
+            {{ range .Pages }}
+            <div class="index-posts__list">
+                <div class="l-time"><a href="{{.Permalink}}">{{ .Date.Format "2006.01.02 15:04" }}</a></div>
+                <div class="l-title"><a href="{{.Permalink}}">{{ .Title }}</a></div>
+            </div>
+            {{ end }}
+
+            <div class="index-paginate">
+                {{ partial "pagination.html" . }}
+            </div>
+        </div>
+    </article>
+</div>
+
+{{ partial "footer.html" . }}

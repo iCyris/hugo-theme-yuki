@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+
+<div class="main-content">
+    {{ $baseurl := .Site.BaseURL | sanitizeurl }}
+    <div class="main-content__title title-type__custom u-font">
+        <h1 id="title">Blog posts</h1>
+    </div>
+
+    <article>
+        <div class="main-content__posts index-posts">
+            <div class="index-posts">
+                {{ $posts := where site.RegularPages "Type" "in" site.Params.mainSections }}
+                {{ range (.Paginate $posts).Pages }}
+                <div class="index-posts__list">
+                    <div class="l-time"><a href="{{.Permalink}}">{{ .Date.Format "2006.01.02 15:04" }}</a></div>
+                    <div class="l-title"><a href="{{.Permalink}}">{{.Title}}</a></div>
+                </div>
+                {{ end }}
+            </div>
+
+            <div class="index-paginate">
+                {{ partial "pagination.html" . }}
+            </div>
+        </div>
+    </article>
+</div>
+
+{{ partial "footer.html" . }}

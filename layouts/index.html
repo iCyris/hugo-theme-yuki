@@ -20,17 +20,19 @@
     <span class="index-line__content u-font">Home</span>
 </div>
 <div class="index-posts">
-    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-    {{ range $pages }}
+    {{ $posts := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ range (.Paginate $posts).Pages }}
     <div class="index-posts__list">
         <div class="l-time"><a href="{{.Permalink}}">{{ .Date.Format "2006.01.02 15:04" }}</a></div>
         <div class="l-title"><a href="{{.Permalink}}">{{.Title}}</a></div>
     </div>
     {{ end }}
+
+    <div class="index-paginate">
+        {{ partial "pagination.html" . }}
+    </div>
 </div>
 
-<div class="index-paginate">
-    {{ partial "pagination.html" . }}
-</div>
+
 
 {{ partial "footer.html" . }}
