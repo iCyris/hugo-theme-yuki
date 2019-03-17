@@ -12,13 +12,13 @@
     <link rel='icon' type='image/x-icon' href="{{ . | absURL }}" />
     <link rel="apple-touch-icon" href="{{ . | absURL }}">
     {{- end -}}
-    <link rel="stylesheet" href="/scss/style.css">
+    <link rel="stylesheet" href="{{ "scss/style.css" | absURL }}">
     <!-- HighlightJS -->
-    <link rel="stylesheet" href="/scss/monokai-sublime.min.css">
-    <script src="/js/highlight.min.js"></script>
-    <link rel="stylesheet" href="/scss/highlight.css">
+    <link rel="stylesheet" href="{{ "scss/monokai-sublime.min.css" | absURL }}">
+    <script src="{{ "js/highlight.min.js" | absURL }}"></script>
+    <link rel="stylesheet" href="{{ "/scss/highlight.css" | absURL }}">
     <!-- Custom Style -->
-    <link rel="stylesheet" href="/scss/custom.css">
+    <link rel="stylesheet" href="{{ "/scss/custom.css" | absURL }}">
     <!-- Google Analytics -->
     {{ with .Site.Params.ga_api_key }}
     <script>

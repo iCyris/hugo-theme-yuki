@@ -6,31 +6,31 @@ author = "Cyris"
 
 # Copyright notice. This will display on the footer.
 copyright = ""
- 
+paginate = 10
+
 # Theme config
 [params]
-  Paginate = 10
-  
+
   # The content you want to be listed on list pages.
   mainSections = ["post"]
-  
+
   # The information will display on the post pages.
   author = "Author"
   description = "Short description"
   authorwebsite = "https://example.com/"
-  
+
   # The path to your images
   favicon = "images/logo.png"
   logo = "images/logo.png"
   avatar = ""
   displayImg = "images/display.png"
-  
+
   # This will display on the index page
   snsTitle = "Social"
-  
+
   # Google Analytics API key.
   ga_api_key = "Your Google Analytics tracking id"
-  
+
 # Navbar config
 [[menu.nav]]
     name = "HOME"
@@ -46,7 +46,7 @@ copyright = ""
     name = "ABOUT"
     url = "/about"
     weight = 3
-    
+
 [[menu.nav]]
     name = "TAGS"
     url = "/tags/"
@@ -57,7 +57,7 @@ copyright = ""
     name = "Example-1"
     url = "/"
     weight = 1
-    
+
 [[menu.social]]
     name = "Example-2"
     url = "/"
