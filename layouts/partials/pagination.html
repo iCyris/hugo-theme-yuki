@@ -35,12 +35,12 @@
 
         <!-- First page. -->
         {{ if ne $pag.PageNumber 1 }}
-        <li><a href="{{ $pag.First.URL }}">&#60;&#60;</a></li>
+        <li><a href="{{ $pag.First.Permalink }}">&#60;&#60;</a></li>
         {{ end }}
 
         <!-- Previous page. -->
         {{ if $pag.HasPrev }}
-        <li><a href="{{ $pag.Prev.URL }}">&#60;</a></li>
+        <li><a href="{{ $pag.Prev.Permalink }}">&#60;</a></li>
         {{ end }}
 
         <!-- Page numbers. -->
@@ -98,12 +98,12 @@
 
         <!-- Next page. -->
         {{ if $pag.HasNext }}
-        <li><a href="{{ $pag.Next.URL }}">&#62;</a></li>
+        <li><a href="{{ $pag.Next.Permalink }}">&#62;</a></li>
         {{ end }}
 
         <!-- Last page. -->
         {{ if ne $pag.PageNumber $pag.TotalPages }}
-        <li><a href="{{ $pag.Last.URL }}">&#62;&#62;</a></li>
+        <li><a href="{{ $pag.Last.Permalink }}">&#62;&#62;</a></li>
         {{ end }}
 
     </ul>

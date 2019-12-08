@@ -9,11 +9,11 @@
     <article>
         <div class="main-content__posts index-posts">
             {{ $currentPage := . }}
-            {{ if eq $currentPage.URL "/post/" }}
+            {{ if eq $currentPage.Permalink "/post/" }}
                 {{ range .Pages }}
                 <div class="index-posts__list">
-                    <div class="l-time"><a href="{{.Permalink}}">{{ .Date.Format "2006.01.02 15:04" }}</a></div>
-                    <div class="l-title"><a href="{{.Permalink}}">{{ .Title }}</a></div>
+                    <div class="l-time"><a href="{{.URL}}">{{ .Date.Format "2006.01.02 15:04" }}</a></div>
+                    <div class="l-title"><a href="{{.URL}}">{{ .Title }}</a></div>
                 </div>
                 {{ end }}
 
